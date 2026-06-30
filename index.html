@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MODIPRO | The Daily Editorial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="cart-toggle" class="hidden-trigger">
+    <input type="checkbox" id="chatbot-toggle" class="hidden-trigger">
+
+    <div class="top-announcement">
+        FREE SHIPPING ON ORDERS OVER 100,000 KRW | STANDARD SHIPPING 3,000 KRW
+    </div>
+
+    <header class="newspaper-header">
+        <div class="header-top-bar">
+            <span>VOL. 1 / NO. 219</span>
+            <span>TUESDAY, JUNE 30, 2026</span>
+            <span>SEOUL, KOREA</span>
+        </div>
+
+        <div class="brand-masthead">
+            <h1>MODIPRO</h1>
+            <p>Wear the Premium, Change the Mood.</p>
+        </div>
+
+        <div class="header-nav-bar">
+            <nav class="main-menu">
+                <a href="#shop">EDITORIALS</a>
+                <a href="#shop">COLLECTION</a>
+                <a href="#shop">ARCHIVE</a>
+                <a href="https://marpple.shop/kr/dayang_official" target="_blank">OFFICIAL STORE</a>
+            </nav>
+            <div class="utility-menu">
+                <div class="lang-switch">
+                    <a href="#" class="active">KR</a>
+                    <a href="#" onclick="alert('English version is preparing.'); return false;">EN</a>
+                </div>
+                <label for="cart-toggle" class="cart-icon-btn" aria-label="Open shopping cart">
+                    <span class="material-icons-round">shopping_bag</span>
+                    <span class="cart-badge" id="cart-counter">0</span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <article class="hero-article">
+            <span class="article-meta">Lead Story    Fashion</span>
+            <h2>The Return of Classic Utility and Tailored Precision</h2>
+            <div class="hero-text">
+                마스터피스를 완성하는 최고급 YKK 지퍼와 모달, 리넨 텍스처. 재사용 가능한 고밀도 원단으로 직조된 프리미엄 제작 공정이 새로운 기준을 제시한다. 모디프로는 일시적인 유행을 좇지 않고 본질적인 기능과 완성도, 그리고 오래 곁에 두고 쓰는 가치에 집중한다.
+                <br><br>
+                모든 봉제선과 마감 처리는 숙련된 공정을 거치며, 견고한 내구성을 바탕으로 일상 속 자연스러운 멋을 추구한다. 옷장을 채우는 단순한 의류가 아닌, 개인의 무드를 대변하고 일상을 지탱해 주는 신뢰도 높은 도구로서 역할을 다하고자 한다.
+            </div>
+        </article>
+        <aside class="hero-sidebar">
+            <div class="issue-highlight">
+                <h3>Editor's Note</h3>
+                <p>이번 캡슐 컬렉션은 전통적인 테일러링 기법과 현대적인 소재의 융합을 다룬다. 세탁 후에도 변형이 적은 원단과 직관적인 실루엣이 특징이다.</p>
+            </div>
+        </aside>
+    </section>
+
+    <main class="store-container">
+        <div class="store-header">
+            <h3>The Archives Collection</h3>
+        </div>
+
+        <div class="button-box">
+            <div class="category-filters">
+                <button class="category-btn active" type="button" data-category="all">All</button>
+                <button class="category-btn" type="button" data-category="tops">Tops</button>
+                <button class="category-btn" type="button" data-category="bottoms">Bottoms</button>
+                <button class="category-btn" type="button" data-category="outerwear">Outerwear</button>
+                <button class="category-btn" type="button" data-category="accessories">Accessories</button>
+            </div>
+            <div class="sort-filters">
+                <button class="sort-btn active" type="button" data-sort="new">Newest</button>
+                <button class="sort-btn" type="button" data-sort="price">Price</button>
+            </div>
+        </div>
+
+        <section id="shop" class="items-grid">
+            <article class="item-card" data-category="tops" data-price="58000">
+                <div class="item-thumb">
+                    <img src="photogrammer7-cloth-1716632_1920.jpg" alt="Signature PIP Detail Heavy Tee" onerror="this.style.display='none';">
+                </div>
+                <div class="item-body">
+                    <span class="item-cat">ISSUE 01. TOPS</span>
+                    <h3 class="item-title">Signature PIP Detail Heavy Tee</h3>
+                    <div class="item-price-block">
+                        <span>58,000 KRW</span>
+                        <button class="buy-btn" onclick="addCartItem()">ADD TO CART</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card" data-category="bottoms" data-price="72000">
+                <div class="item-thumb">
+                    <img src="gadini-jeans-852253_1920.jpg" alt="YKK Zip Straight Midnight Denim" onerror="this.style.display='none';">
+                </div>
+                <div class="item-body">
+                    <span class="item-cat">ISSUE 02. BOTTOMS</span>
+                    <h3 class="item-title">YKK Zip Straight Midnight Denim</h3>
+                    <div class="item-price-block">
+                        <span>72,000 KRW</span>
+                        <button class="buy-btn" onclick="addCartItem()">ADD TO CART</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card" data-category="tops" data-price="66000">
+                <div class="item-thumb">
+                    <img src="jarmoluk-jeans-428614.jpg" alt="Editorial Cover Knit" onerror="this.style.display='none';">
+                </div>
+                <div class="item-body">
+                    <span class="item-cat">ISSUE 03. TOPS</span>
+                    <h3 class="item-title">Editorial Cover Knit with Luxe Stitch</h3>
+                    <div class="item-price-block">
+                        <span>66,000 KRW</span>
+                        <button class="buy-btn" onclick="addCartItem()">ADD TO CART</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card" data-category="outerwear" data-price="128000">
+                <div class="item-thumb">
+                    <img src="pexels-clothes-1838325_1920.jpg" alt="Nocturne Noir Premium Bomber" onerror="this.style.display='none';">
+                </div>
+                <div class="item-body">
+                    <span class="item-cat">ISSUE 04. OUTERWEAR</span>
+                    <h3 class="item-title">Nocturne Noir Premium Bomber</h3>
+                    <div class="item-price-block">
+                        <span>128,000 KRW</span>
+                        <button class="buy-btn" onclick="addCartItem()">ADD TO CART</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card" data-category="outerwear" data-price="145000">
+                <div class="item-thumb">
+                    <img src="archive-blazer.jpg" alt="Archive Tailored Wool Blazer" onerror="this.style.display='none';">
+                </div>
+                <div class="item-body">
+                    <span class="item-cat">ISSUE 05. OUTERWEAR</span>
+                    <h3 class="item-title">Archive Tailored Wool Blazer</h3>
+                    <div class="item-price-block">
+                        <span>145,000 KRW</span>
+                        <button class="buy-btn" onclick="addCartItem()">ADD TO CART</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card" data-category="bottoms" data-price="89000">
+                <div class="item-thumb">
+                    <img src="pleated-trousers.jpg" alt="Heritage Pleated Trousers" onerror="this.style.display='none';">
+                </div>
+                <div class="item-body">
+                    <span class="item-cat">ISSUE 06. BOTTOMS</span>
+                    <h3 class="item-title">Heritage Pleated Trousers</h3>
+                    <div class="item-price-block">
+                        <span>89,000 KRW</span>
+                        <button class="buy-btn" onclick="addCartItem()">ADD TO CART</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card" data-category="accessories" data-price="42000">
+                <div class="item-thumb">
+                    <img src="silk-scarf.jpg" alt="Artisan Silk Neck Scarf" onerror="this.style.display='none';">
+                </div>
+                <div class="item-body">
+                    <span class="item-cat">ISSUE 07. ACCESSORIES</span>
+                    <h3 class="item-title">Artisan Silk Neck Scarf</h3>
+                    <div class="item-price-block">
+                        <span>42,000 KRW</span>
+                        <button class="buy-btn" onclick="addCartItem()">ADD TO CART</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="item-card" data-category="accessories" data-price="65000">
+                <div class="item-thumb">
+                    <img src="canvas-tote.jpg" alt="Classic Oxford Canvas Tote" onerror="this.style.display='none';">
+                </div>
+                <div class="item-body">
+                    <span class="item-cat">ISSUE 08. ACCESSORIES</span>
+                    <h3 class="item-title">Classic Oxford Canvas Tote</h3>
+                    <div class="item-price-block">
+                        <span>65,000 KRW</span>
+                        <button class="buy-btn" onclick="addCartItem()">ADD TO CART</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="qna-board-section">
+            <label for="chatbot-toggle" class="qna-bar-card" aria-label="Open customer Q&A support chat">
+                <div class="qna-bar-content">
+                    <span class="material-icons-round qna-icon">forum</span>
+                    <div class="qna-bar-copy">
+                        <h3>Customer Q&A Support</h3>
+                        <p>자주 묻는 질문과 배송 및 지퍼 케어 상담을 한 곳에서 지원합니다. 클릭 시 원활한 CS 안내 챗봇이 활성화됩니다.</p>
+                    </div>
+                </div>
+                <span class="qna-bar-action">상담 시작</span>
+            </label>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-card">
+                <div class="contact-intro">
+                    <h3>문의하기</h3>
+                    <p>맞춤 상담, 주문 문의, 소재 케어 정보를 빠르게 받아보세요.</p>
+                </div>
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <input type="text" name="name" placeholder="이름" required>
+                    <input type="email" name="email" placeholder="이메일" required>
+                    <textarea name="message" rows="5" placeholder="문의 내용을 입력해 주세요" required></textarea>
+                    <button type="submit" class="buy-btn">Send Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="ai-chatbot-container">
+        <label for="chatbot-toggle" class="chatbot-trigger-btn" aria-label="Open customer support">
+            <span class="material-icons-round open-icon">star</span>
+            <span class="material-icons-round close-icon">close</span>
+        </label>
+        <div class="chatbot-window">
+            <div class="chatbot-header">
+                <span class="material-icons-round">star</span>
+                <span>MODIPRO CS Concierge</span>
+            </div>
+            <div class="chatbot-body" id="chat-scroller">
+                <div class="msg ai-msg">안녕하세요. 프리미엄 스튜디오 MODIPRO 지원 센터입니다. 필요한 안내 카테고리를 선택해 주시면 즉시 답변을 드립니다.</div>
+                <div class="chatbot-options" id="initial-options">
+                    <button type="button" class="opt-btn" onclick="handleCsScenario('shipping')">1. 배송비 및 배송 기간 안내</button>
+                    <button type="button" class="opt-btn" onclick="handleCsScenario('fabric')">2. 모달·리넨 원단 세탁 가이드</button>
+                    <button type="button" class="opt-btn" onclick="handleCsScenario('zipper')">3. YKK 프리미엄 지퍼 관리법</button>
+                </div>
+            </div>
+            <div class="chatbot-footer">
+                <input type="text" id="chat-input" placeholder="메시지를 입력해 주세요..." onkeypress="if(event.key === 'Enter') sendUserMessage()">
+                <button type="button" onclick="sendUserMessage()"><span class="material-icons-round">send</span></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <h2 class="footer-logo">MODIPRO</h2>
+        <div class="footer-info">
+            <p>상호명: MODIPRO STUDIO | 책임 오피서 부서 권한 대행</p>
+            <p>고객센터: 010-1436-8991 | 이메일: support@modipro.studio</p>
+            <p>주소: 경기도 수원시 영통구 월드컵로 206, 아주대학교 창업벤처센터 3층 305호</p>
+            <p>&copy; 2026 MODIPRO Studio. The Daily Editorial. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+        function addCartItem() {
+            cartCount++;
+            document.getElementById('cart-counter').textContent = cartCount;
+            alert('장바구니에 상품이 추가되었습니다.');
+        }
+
+        function handleContactForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const message = form.message.value.trim();
+            if (!name || !email || !message) {
+                alert('모든 항목을 입력해 주세요.');
+                return;
+            }
+            alert('문의가 접수되었습니다. 곧 답변 드리겠습니다.');
+            form.reset();
+        }
+
+        function handleCsScenario(type) {
+            const scroller = document.getElementById('chat-scroller');
+            const userText = {
+                shipping: '배송 정책에 대해 알려주세요.',
+                fabric: '모달·리넨 원단 세탁 가이드가 궁금합니다.',
+                zipper: 'YKK 지퍼 관리 방법을 알려 주세요.'
+            }[type] || '문의합니다.';
+
+            const aiResponse = {
+                shipping: 'MODIPRO의 기본 배송비는 3,000원이며, 100,000원 이상 구매 시 무료 배송이 적용됩니다. 영업일 기준 2~4일 내 수령 가능합니다.',
+                fabric: '가벼운 손세탁 또는 세탁망을 사용한 울코스 세탁을 권장합니다. 약한 탈수 후 그늘에서 자연 건조하세요.',
+                zipper: '지퍼는 닫은 상태로 세탁망에 넣어 세탁하고, 오염물은 부드러운 솔로 제거한 뒤 부드럽게 여닫으세요.'
+            }[type] || '문의해 주셔서 감사합니다.';
+
+            appendMessage(userText, 'user-msg');
+            setTimeout(() => {
+                appendMessage(aiResponse, 'ai-msg');
+                appendResetOption();
+            }, 400);
+        }
+
+        function sendUserMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+            appendMessage(text, 'user-msg');
+            input.value = '';
+            setTimeout(() => {
+                appendMessage('문의가 접수되었습니다. 담당자가 확인 후 안내드릴 예정입니다.', 'ai-msg');
+            }, 500);
+        }
+
+        function appendMessage(text, className) {
+            const scroller = document.getElementById('chat-scroller');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `msg ${className}`;
+            msgDiv.textContent = text;
+            scroller.appendChild(msgDiv);
+            scroller.scrollTop = scroller.scrollHeight;
+        }
+
+        function appendResetOption() {
+            const scroller = document.getElementById('chat-scroller');
+            const optDiv = document.createElement('div');
+            optDiv.className = 'chatbot-options';
+            optDiv.innerHTML = `<button type="button" class="opt-btn" onclick="resetCsOptions()">처음 메뉴로 돌아가기</button>`;
+            scroller.appendChild(optDiv);
+            scroller.scrollTop = scroller.scrollHeight;
+        }
+
+        function resetCsOptions() {
+            appendMessage('처음 메뉴로 돌아갑니다.', 'user-msg');
+            setTimeout(() => {
+                const scroller = document.getElementById('chat-scroller');
+                const optDiv = document.createElement('div');
+                optDiv.className = 'chatbot-options';
+                optDiv.innerHTML = `
+                    <button type="button" class="opt-btn" onclick="handleCsScenario('shipping')">1. 배송비 및 배송 기간 안내</button>
+                    <button type="button" class="opt-btn" onclick="handleCsScenario('fabric')">2. 모달·리넨 원단 세탁 가이드</button>
+                    <button type="button" class="opt-btn" onclick="handleCsScenario('zipper')">3. YKK 프리미엄 지퍼 관리법</button>
+                `;
+                scroller.appendChild(optDiv);
+                scroller.scrollTop = scroller.scrollHeight;
+            }, 300);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = Array.from(document.querySelectorAll('.item-card'));
+            const grid = document.querySelector('.items-grid');
+
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    const cat = e.target.dataset.category;
+                    cards.forEach(card => {
+                        card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'flex' : 'none';
+                    });
+                });
+            });
+
+            document.querySelectorAll('.sort-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    const sort = e.target.dataset.sort;
+                    const sorted = [...cards];
+                    if (sort === 'price') {
+                        sorted.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+                    }
+                    grid.innerHTML = '';
+                    sorted.forEach(c => grid.appendChild(c));
+                });
+            });
+
+            document.addEventListener('contextmenu', e => e.preventDefault());
+        });
+    </script>
+</body>
+</html>
